@@ -1,0 +1,103 @@
+type = "card"
+title = "Awards"
+description = "Honors and awards I have received."
+
+# 2025
+[[items]]
+title = "Beautiful China Innovation Design Competition for Graduate Students"
+subtitle = "Chinese Society of Academic Degrees and Graduate Education"
+date = "2025"
+content = "National Second Prize"
+
+[[items]]
+title = "China International College Students' Innovation Competition"
+subtitle = "Ministry of Education"
+date = "2025"
+content = "Provincial Bronze Award"
+
+[[items]]
+title = "Huacan Award"
+subtitle = "Cross-Strait Design Competition Committee"
+date = "2025"
+content = "National Third Prize, Provincial Second/Third Prize"
+
+[[items]]
+title = "National Scholarship for Graduate Students"
+subtitle = "Ministry of Education of the People's Republic of China"
+date = "2025"
+content = "Top national scholarship for graduate students."
+
+[[items]]
+title = "Qingtai International Industrial Design Competition"
+subtitle = "China Industrial Design Association"
+date = "2025"
+content = "Second Prize"
+
+[[items]]
+title = "Shenzhen International Eyewear Design Competition"
+subtitle = "Shenzhen Municipal Government, etc."
+date = "2025"
+content = "First Prize"
+
+# 2024
+[[items]]
+title = "'Challenge Cup' Competition"
+subtitle = "Central Committee of the Communist Youth League, etc."
+date = "2024"
+content = "Provincial Bronze Award"
+
+[[items]]
+title = "International User Experience Innovation Competition"
+subtitle = "China Industrial Design Association, etc."
+date = "2024"
+content = "National Third Prize ×2"
+
+[[items]]
+title = "Milan Design Week - China University Design Exhibition"
+subtitle = "University Design Exhibition Committee"
+date = "2024"
+content = "National Third Prize"
+
+[[items]]
+title = "National Youth Designer Competition"
+subtitle = "China Industrial Design Association"
+date = "2024"
+content = "Third Prize"
+
+# 2023
+[[items]]
+title = "BaiLi Furniture Design Competition"
+subtitle = "Guangdong Furniture Association"
+date = "2023"
+content = "Bronze Award"
+
+[[items]]
+title = "International User Experience Innovation Competition (Huawei Special Track)"
+subtitle = "Huawei & Competition Committee"
+date = "2023"
+content = "Best Experience Design Award"
+
+[[items]]
+title = "NCDA - National College Digital Art & Design Competition"
+subtitle = "Competition Committee"
+date = "2023"
+content = "National Third Prize, Provincial First Prize"
+
+[[items]]
+title = "Oriental Design Award"
+subtitle = "Competition Committee"
+date = "2023"
+content = "Second Prize, Third Prize"
+
+# 2022
+[[items]]
+title = "Marine Culture Creative Design Competition for University Students"
+subtitle = "Ocean University of China"
+date = "2022"
+content = "Silver Award"
+
+[[items]]
+title = "Wuhan International Creative Design Competition"
+subtitle = "Wuhan Municipal Government"
+date = "2022"
+content = "Excellence Award"
