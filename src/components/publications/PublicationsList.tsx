@@ -155,7 +155,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             exit={{ opacity: 0, height: 0 }}
                             className="overflow-hidden"
                         >
-                            <div className="p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg border border-neutral-200 dark:border-neutral-800 flex flex-wrap gap-6">
+                            <div className="glass-panel-subtle p-4 rounded-lg flex flex-wrap gap-6">
                                 {/* Year Filter */}
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-neutral-700 dark:text-neutral-300 flex items-center">
@@ -242,7 +242,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 * index }}
-                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
+                            className="glass-panel p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
                         >
                             <div className="flex flex-col md:flex-row gap-6">
                                 {pub.preview && (
@@ -366,7 +366,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 exit={{ opacity: 0, height: 0 }}
                                                 className="overflow-hidden mt-4"
                                             >
-                                                <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
+                                                <div className="glass-panel-subtle rounded-lg p-4">
                                                     <p className="text-sm text-neutral-600 dark:text-neutral-500 leading-relaxed">
                                                         {pub.abstract}
                                                     </p>
@@ -381,7 +381,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 exit={{ opacity: 0, height: 0 }}
                                                 className="overflow-hidden mt-4"
                                             >
-                                                <div className="relative bg-neutral-50 dark:bg-neutral-800 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
+                                                <div className="glass-panel-subtle relative rounded-lg p-4">
                                                     <pre className="text-xs text-neutral-600 dark:text-neutral-500 overflow-x-auto whitespace-pre-wrap font-mono">
                                                         {pub.bibtex}
                                                     </pre>
