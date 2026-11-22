@@ -2,6 +2,21 @@ type = "card"
 title = "Awards"
 description = "Honors and awards I have received."
 
+# 2026
+[[items]]
+title = "Urban Cup Competition"
+subtitle = "2026 International Conference on Urban Science and Intelligence"
+date = "2026"
+content = "Third Prize"
+link = "https://mp.weixin.qq.com/s/DsHmFcGKHVgcpYwmC3UbaQ"
+
+[[items]]
+title = "OASIS Student Challenge"
+subtitle = "ACM SIGSPATIAL 2026"
+date = "2026"
+content = "Finalist"
+link = "https://rsvp.withgoogle.com/events/oasis-2026?pli=1"
+
 # 2025
 [[items]]
 title = "Beautiful China Innovation Design Competition for Graduate Students"
