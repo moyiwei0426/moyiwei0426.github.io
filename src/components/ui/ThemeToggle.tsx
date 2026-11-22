@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
 import { useThemeStore, type Theme } from '@/lib/stores/themeStore';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/components/ui/LanguageProvider';
 
 const themes: { value: Theme; label: string; icon: React.ReactNode }[] = [
   {
@@ -25,6 +26,7 @@ const themes: { value: Theme; label: string; icon: React.ReactNode }[] = [
 ];
 
 export function ThemeToggle() {
+  const { language } = useLanguage();
   const { theme, setTheme } = useThemeStore();
   const [mounted, setMounted] = useState(false);
 
@@ -62,7 +64,7 @@ export function ThemeToggle() {
           'transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50',
           'text-neutral-600 hover:text-primary dark:text-neutral-400 dark:hover:text-white'
         )}
-        title={`Current theme: ${currentTheme.label}. Click to cycle theme.`}
+        title={language === 'zh' ? `当前主题：${{ system: '跟随系统', light: '浅色', dark: '深色' }[theme]}。点击切换主题。` : `Current theme: ${currentTheme.label}. Click to cycle theme.`}
       >
         <motion.div
           key={theme}

@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { CardPageConfig } from '@/types/page';
+import { useLanguage } from '@/components/ui/LanguageProvider';
 
 export default function CardPage({ config, embedded = false }: { config: CardPageConfig; embedded?: boolean }) {
+    const { t } = useLanguage();
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -11,10 +13,10 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
             transition={{ duration: 0.6, delay: 0.4 }}
         >
             <div className={embedded ? "mb-4" : "mb-8"}>
-                <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
+                <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{t(config.title)}</h1>
                 {config.description && (
                     <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl`}>
-                        {config.description}
+                        {t(config.description)}
                     </p>
                 )}
             </div>
@@ -37,9 +39,9 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                         rel="noopener noreferrer"
                                         className="underline decoration-current/30 underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent transition-colors"
                                     >
-                                        {item.title}
+                                        {t(item.title)}
                                     </a>
-                                ) : item.title}
+                                ) : t(item.title)}
                             </h3>
                             {item.date && (
                                 <span className="text-sm text-neutral-500 font-medium bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
@@ -48,11 +50,11 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                             )}
                         </div>
                         {item.subtitle && (
-                            <p className={`${embedded ? "text-sm" : "text-base"} text-accent font-medium mb-3`}>{item.subtitle}</p>
+                            <p className={`${embedded ? "text-sm" : "text-base"} text-accent font-medium mb-3`}>{t(item.subtitle)}</p>
                         )}
                         {item.content && (
                             <p className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-500 leading-relaxed`}>
-                                {item.content}
+                                {t(item.content)}
                             </p>
                         )}
                         {item.tags && (

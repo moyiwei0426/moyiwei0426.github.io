@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { LanguageProvider } from "@/components/ui/LanguageProvider";
 import { getConfig } from "@/lib/config";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -99,6 +100,7 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         <ThemeProvider>
+          <LanguageProvider>
           <Navigation
             items={config.navigation}
             siteTitle={config.site.title}
@@ -108,6 +110,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer lastUpdated={config.site.last_updated} />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

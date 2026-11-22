@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import { useLanguage } from '@/components/ui/LanguageProvider';
 
 interface AboutProps {
     content: string;
@@ -9,6 +10,11 @@ interface AboutProps {
 }
 
 export default function About({ content, title = 'About' }: AboutProps) {
+    const { t } = useLanguage();
+    const translatedContent = content.split('\n').map(line => {
+        const match = line.match(/^(#{1,6}\s+|\*\*|\*)(.*?)(\*\*|\*)?$/);
+        return match ? `${match[1]}${t(match[2])}${match[3] || ''}` : t(line.trim());
+    }).join('\n');
     return (
         <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -16,7 +22,7 @@ export default function About({ content, title = 'About' }: AboutProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
         >
             <div className="glass-panel-accent rounded-2xl p-6">
-                <h2 className="text-2xl font-serif font-bold text-primary mb-4">{title}</h2>
+                <h2 className="text-2xl font-serif font-bold text-primary mb-4">{t(title)}</h2>
                 <div className="text-neutral-700 dark:text-neutral-600 leading-relaxed">
                     <ReactMarkdown
                         components={{
@@ -44,7 +50,7 @@ export default function About({ content, title = 'About' }: AboutProps) {
                             em: ({ children }) => <em className="italic text-neutral-600 dark:text-neutral-500">{children}</em>,
                         }}
                     >
-                        {content}
+                        {translatedContent}
                     </ReactMarkdown>
                 </div>
             </div>

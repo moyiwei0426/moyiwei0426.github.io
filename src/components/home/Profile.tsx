@@ -13,6 +13,7 @@ import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin } from 'lucide-react';
 import { SiteConfig } from '@/lib/config';
+import { useLanguage } from '@/components/ui/LanguageProvider';
 
 // Custom ORCID icon component
 const OrcidIcon = ({ className }: { className?: string }) => (
@@ -34,6 +35,7 @@ interface ProfileProps {
 }
 
 export default function Profile({ author, social, features, researchInterests }: ProfileProps) {
+    const { t } = useLanguage();
 
     const [hasLiked, setHasLiked] = useState(false);
     const [showThanks, setShowThanks] = useState(false);
@@ -127,10 +129,10 @@ export default function Profile({ author, social, features, researchInterests }:
                     {author.name}
                 </h1>
                 <p className="text-lg text-accent font-medium mb-1">
-                    {author.title}
+                    {t(author.title)}
                 </p>
                 <p className="text-neutral-600 mb-2">
-                    {author.institution}
+                    {t(author.institution)}
                 </p>
             </div>
 
@@ -304,10 +306,10 @@ export default function Profile({ author, social, features, researchInterests }:
             {/* Research Interests */}
             {researchInterests && researchInterests.length > 0 && (
                 <div className="glass-panel-strong rounded-xl p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                    <h3 className="font-semibold text-primary mb-3">Research Interests</h3>
+                    <h3 className="font-semibold text-primary mb-3">{t('Research Interests')}</h3>
                     <div className="space-y-2 text-sm text-neutral-700 dark:text-neutral-500">
                         {researchInterests.map((interest, index) => (
-                            <div key={index}>{interest}</div>
+                            <div key={index}>{t(interest)}</div>
                         ))}
                     </div>
                 </div>
